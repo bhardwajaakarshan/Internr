@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="information">
+<head lang="en">
+    <meta charset="UTF-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.8/angular.min.js"></script>
+    <script type="text/javascript" src="main2.js"></script>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.3.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+    <title>Welcome to Internr!</title>
+</head>
+<body ng-controller="ProjectController as project"
+      style="background-image: url('http://iyanovich.files.wordpress.com/2010/04/amex.jpg'); background-repeat: repeat-x;">
+<img src="https://lh4.googleusercontent.com/-4B6qyU5n7CQ/VLuH89bhveI/AAAAAAAAAlk/N_HQm3s9SuM/w615-h179-no/internr.png" style="display: block; margin-left: auto; margin-right: auto;"/>
+<section ng-controller="TabController as tab">
+    <ul ng-repeat="product in project.products">
+        <div ng-show="product.order === tab.getTab()">
+            <h1 style="font-family: Yu Mincho Light; text-align: center;">{{product.name}}</h1>
+            <img src="{{product.image}}" style="display: block; margin-left: auto; margin-right: auto; width:450px;position:relative; top:40%"/>
+            <blockquote style="font-family: Yu Mincho Light; display: block; margin-left: auto; margin-right: auto; width: 700px;
+    word-wrap: break-word;">{{product.description}}
+            </blockquote>
+        </div>
+    </ul>
+    <button ng-show="tab.getTab() <= project.products.length" ng-click="tab.incrementTab()" style="align-content: center; font-size:30px; position:relative; top: 40%; left:40%">Qualifies
+    </button>
+    <button ng-show="tab.getTab() <= project.products.length" ng-click="tab.incrementTab()" style="align-content: center; font-size:30px; position:relative; top: 40%; left:40%">Does Not Pass
+    </button>
+    <p ng-hide="tab.getTab() <= project.products.length" style="font-family: Gotham-Black; font-size: 30px; text-align: center;">No new applicants. Check back soon!</p>
+</section>
+</body>
+</html>

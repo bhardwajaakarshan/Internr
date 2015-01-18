@@ -2,37 +2,40 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title></title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="http://www.parsecdn.com/js/parse-1.3.3.min.js"></script>
+    <script type="text/javascript" src="parse_upload_recruiter.js"></script>
+    <title>INTERNr Signin R</title>
 </head>
-<body>
-<h1 style="text-align: center; font-family: Yu Mincho Light; font-size: 80px; padding-bottom: 8%; padding-top: 3%;">Sign in to INTERNr for Recruiters</h1>
+<body style="background-image: url('http://iyanovich.files.wordpress.com/2010/04/amex.jpg'); background-repeat: repeat-x;
+      padding: 40px;">
+<h1 style="text-align: center; color: black; font-family: Yu Mincho Light; font-size: 80px; padding-bottom: 8%; padding-top: 3%; ">Sign in to INTERNr for Recruiters</h1>
 <a href="../Internr/applicant_internr.html" style="text-align: center;">For Applicants</a>
 <form class="pure-form pure-form-stacked">
     <fieldset>
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Email">
+        <label for="email1"></label>
+        <input id="email1" type="email" placeholder="Email" style="font-size: 25px;">
 
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Password">
+        <label for="password1"></label>
+        <input id="password1" type="password" placeholder="Password" style="font-size: 25px;">
 
-        <a href="../Internr/index.html" style="float: right;">Sign in</a>
+        <a href="../Internr/index2.html" style="float: right; font-size:25px;">Sign in</a>
     </fieldset>
     <fieldset>
-        <label for="name">Name</label>
-        <input id="name" type="email" placeholder="Name">
+        <label for="name"></label>
+        <input id="name" type="email" placeholder="Name" style="font-size: 25px;">
 
-        <label for="email">Email</label>
-        <input id="email" type="email" placeholder="Email">
+        <label for="email"></label>
+        <input id="email" type="email" placeholder="Email" style="font-size: 25px;">
 
-        <label for="password">Password</label>
-        <input id="password" type="password" placeholder="Password">
+        <label for="password"></label>
+        <input id="password" type="password" placeholder="Password" style="font-size: 25px;">
 
         <label>Company image upload</label>
         <form enctype="multipart/form-data" action="/upload/image" method="post">
             <input id="image-file" type="file" />
         </form>
-
-        <a href="../Internr/index.html" style="float: right;">Sign up</a>
+        <a id="submit" href="../Internr/index2.html" style="float: right; font-size: 25px;">Sign up</a>
     </fieldset>
 </form>
 </body>
